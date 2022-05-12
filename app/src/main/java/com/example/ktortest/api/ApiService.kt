@@ -18,7 +18,7 @@ interface ApiService {
                 client = HttpClient(Android) {
                     // Logging
                     install(Logging) {
-                        level = LogLevel.ALL
+                        level = LogLevel.HEADERS
                     }
                     // JSON
                     install(JsonFeature) {
@@ -27,9 +27,9 @@ interface ApiService {
                     }
                     // Timeout
                     install(HttpTimeout) {
-                        requestTimeoutMillis = 15000L
-                        connectTimeoutMillis = 15000L
-                        socketTimeoutMillis = 15000L
+                        requestTimeoutMillis = 60000L
+                        connectTimeoutMillis = 60000L
+                        socketTimeoutMillis = 60000L
                     }
                 }
             )
